@@ -1,6 +1,6 @@
 # BasicAuth-using-Gin-Gonic
 
-##Basic Auth custom middleware 
+##  Basic Auth custom middleware 
 
 **Reqirements : Golang, gin-gonic, mysql**
 
