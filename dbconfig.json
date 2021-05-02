@@ -1,16 +1,24 @@
 [
 	{
-		"Field" : "username",
-		"Type" : "varchar(15)",
-		"Null" : "YES",
+		"Field" : "email",
+		"Type" : "varchar(20)",
+		"Null" : "NO",
+		"Key" : "PRI",
+		"Default" : null,
+		"Extra" : ""
+	},
+	{
+		"Field" : "api_key",
+		"Type" : "varchar(25)",
+		"Null" : "NO",
 		"Key" : "",
 		"Default" : null,
 		"Extra" : ""
 	},
 	{
-		"Field" : "pass",
-		"Type" : "varchar(20)",
-		"Null" : "YES",
+		"Field" : "hash_value",
+		"Type" : "varchar(100)",
+		"Null" : "NO",
 		"Key" : "",
 		"Default" : null,
 		"Extra" : ""
