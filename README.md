@@ -31,3 +31,9 @@ Import it in your code:
 **Check dbconfig file for database info**
 
 *Note : API secret is generated and the hash value or HMAC value of API secret and the server secret is stored in DB*
+
+API key generation route 
+`/generate/<email>`
+
+API authenticated route (Basic Auth)
+`/v1/secret`
