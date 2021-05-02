@@ -48,7 +48,7 @@ func GenerateApiKeys(email string) string {
 
 //Generate Secret
 func GenerateSecret(key string, email string) string {
-	secret := "Venkatakrishna"
+	secret := "ServerSecret"
 	rand.Seed(time.Now().UnixNano())
 	chars := GenerateRune(key)
 	length := 16
