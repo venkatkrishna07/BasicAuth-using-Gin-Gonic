@@ -17,6 +17,7 @@ func BasicAuth() gin.HandlerFunc {
 
 		if len(auth) != 2 || auth[0] != "Basic" {
 			respondWithError(401, "Unauthorized, please use Basic Auth as authentication method", c)
+
 			return
 		}
 		payload, _ := base64.StdEncoding.DecodeString(auth[1])
@@ -36,7 +37,7 @@ func authenticateUser(username, password string) bool {
 	var authenticated bool
 	db1, err := sql.Open("mysql", "root:root123@tcp(127.0.0.1:3306)/TestAuth")
 	if err != nil {
-		panic(err)
+		panic("DB failed")
 	}
 
 	result, err := db1.Query("Select username , pass from apikeys where username = ?  ", username)

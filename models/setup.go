@@ -9,7 +9,7 @@ import (
 var DB *sql.DB
 
 //This DB connection for other database func , not for authentication
-func ConnectDatabase() {
+func ConnectDatabase() bool {
 	db, err := sql.Open("mysql", "root:root123@tcp(127.0.0.1:3306)/TestAuth")
 	if err != nil {
 		panic(err)
@@ -20,5 +20,5 @@ func ConnectDatabase() {
 	}
 
 	DB = db
-
+	return true
 }
