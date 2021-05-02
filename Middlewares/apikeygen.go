@@ -48,7 +48,7 @@ func GenerateApiKeys(email string) string {
 
 //Generate Secret
 func GenerateSecret(key string, email string) string {
-	secret := "ServerSecret"
+	server_secret := "ServerSecret"
 	rand.Seed(time.Now().UnixNano())
 	chars := GenerateRune(key)
 	length := 16
@@ -57,7 +57,7 @@ func GenerateSecret(key string, email string) string {
 		b.WriteRune(chars[rand.Intn(len(chars))])
 	}
 	str := b.String()
-	ComputeHmac256(email, key, str, secret)
+	ComputeHmac256(email, key, str, server_secret)
 
 	return str
 }
